@@ -356,12 +356,6 @@ CBX拨号发生变动之后，UI页面不会更新。如CBX1播放改成CBX3， 
 
 
 
-### 4. CB
-
-
-
-
-
 
 
 ## 4). 工具类
@@ -412,6 +406,22 @@ CBX拨号发生变动之后，UI页面不会更新。如CBX1播放改成CBX3， 
 - 在Serial Code Management菜单下，Actions菜单不可以删除的就是系统库，否则就是非系统库
 - 系统库是全局shared的，即全球所有客户都可以看到并选择这个RS232码库；非系统的则只有该账号下的组织可以查看选择。
 - 若已确认该机器（如 QA1300 Pro) 是系统库，则应该通知测试组进行校验RS232是否准确，校验无误则通知开发转入系统库。
+
+
+
+
+
+## 四、第三方兼容类
+
+### 1. IFP关机关机之后又自动开机
+
+- 背景：新加坡SP项目，客户反馈一台TV（IFP）透过CBX进行控制，点击关机之后过一阵子会自动开机，100%重现。
+- 原因: 客户的IFP同时也接入了Logitech Rally Bar（via HDMI cable)[^1]. 有的产品带有HDMI 唤醒功能（[HDMI-CEC协议](https://blog.csdn.net/qq_58264156/article/details/133998009)）。
+- 结论：遇到类似情况，可以让客户多拍照，咨询客户是否还有接入其他什么设备，以什么方式接入。
+
+
+
+[^1]:  客户原话：Yes this issue has been settled. We traced this problem to the Logitech Rally Bar that was connected to one of the HDMI inputs of the tv. <br>We hv connected a hdmi cable from one of the outputs in this Rally Bar to the HDMI input 2 of the tv. It seems there is voltage presence from this output of Rally Bar. So when we shut down the tv via CBX control, the tv pick up the voltage from the hdmi output of Rally Bar and it trigger the tv.
 
 
 
