@@ -6,7 +6,55 @@
 
 ## 一、 中性与私有部署
 
-### Touch Panel开机Logo自定义
+
+
+### 1. Q-NEX版本与部署方式
+
+**Q-NEX has three main versions:**
+
+1. **Standard Version** – Accessible via https://mg.qnextech.com/console/login, this is the official cloud platform managed by Q-NEX. It gets the latest features and fixes quickly. To ensure fast access worldwide, we use **CDN technology** for better performance.
+2. **Neutral Version** – Some distributors prefer a **non-branded** version to avoid exposing the IQ/Q-NEX brand to end users. This version is mainly for **demo purposes** and can be accessed at http://27.151.53.58:9999/console/login. All Q-NEX branding has been removed or hidden.
+3. **OEM Version** – A fully **custom-branded** version where distributors can replace logos and branding. Since each distributor has different requirements, OEM versions **must be deployed privately**.
+
+**Q-NEX 平台主要分为以下三种版本**：
+
+1. **标准版**：用户可通过公网访问（https://mg.qnextech.com/console/login），由 Q-NEX 云端统一部署和维护。由于运行在公网，系统能够快速获取新功能和问题修复。同时，为了优化全球用户的访问体验，我们还采用了 CDN 技术来提高访问速度。
+2. **中性版**：部分代理商出于市场策略考虑，不希望以 IQ / Q-NEX 品牌对外，因此会选择中性版作为折中方案。它主要用于演示目的，用户可通过 http://27.151.53.58:9999/console/login 快速访问，该版本已移除或隐藏 IQ / Q-NEX 相关品牌标识。
+3. **定制版（OEM）**：相较于中性版，OEM 版本对品牌有更高的定制需求，通常用于代理商希望完全替换为自己的 Logo 和品牌形象的情况。由于每家代理商的品牌要求不同，OEM 版本必须采用私有化部署。
+
+-------
+
+**Deployment Options**
+
+- **Standard Deployment** – Hosted on Q-NEX cloud servers, fully managed and maintained by Q-NEX.
+- **Private Deployment** – Customers provide their own servers, either cloud-based (AWS, Azure, Google Cloud) or local servers (e.g., Dell). Private servers require **high performance and RAID storage**, making them costly.For **demo purposes**, customers can consider **OPS deployment**, but it's important to note that **OPS has limited performance, lacks RAID, and data loss is irreversible**. Sales teams should always recommend **proper servers** for reliability.
+
+**部署方式**：
+
+- **标准部署**：由 Q-NEX 云平台提供的统一服务，适用于大多数用户，运维和更新均由 Q-NEX 负责。
+- **私有化部署**：由用户自行提供服务器，支持云服务器（如 AWS、Azure、Google Cloud）或本地服务器（如 Dell 服务器等）。由于服务器通常需要高性能配置及磁盘阵列，成本较高。如果仅用于演示，可以考虑使用 **OPS 设备** 进行部署。但需要明确，OPS 性能有限，且不具备磁盘阵列，一旦数据损坏，无法恢复。因此，在销售过程中，应优先建议客户购买标准服务器，而非 OPS。
+
+
+
+### 2. Q-NEX中性版本
+
+> 相关参阅地址： [smb://192.168.10.168/IQ-国际事业部/4.跨部门共享区/1.售前支持Pre-sales/2. 营销工具（彩页&参数表&图片&视频等）Marketing materials/9.Q-NEX产品线/13 Q-NEX私有云部署销售策略](smb://192.168.10.168/IQ-国际事业部/4.跨部门共享区/1.售前支持Pre-sales/2. 营销工具（彩页&参数表&图片&视频等）Marketing materials/9.Q-NEX产品线/13 Q-NEX私有云部署销售策略)
+
+- 我们有现成可用的中性版本demo吗？
+
+  The **Neutral Version** of the Q-NEX platform is available for internal testing and demonstrations at http://27.151.53.58:9999/console/login (login: leewang / 123456). As it is a demo version, it is accessed via IP and does not support HTTPS since certificate deployment is not included. 
+
+  > Q-NEX 平台的 **中性版本** 可用于内部测试和演示，访问地址为 http://27.151.53.58:9999/console/login（账号：leewang / 密码：123456）。由于该版本仅用于演示，目前通过 IP 访问，未部署证书，因此不支持 HTTPS。
+
+- 为了方便demo，能否直接通利用客户现有的OPS私有化部署中性版呢
+
+  For private deployment, we recommend customers purchase our **OPS**, where the system is pre-installed before shipment. Remote deployment is not advised due to the need for local access permissions and time zone coordination.
+
+  对于私有化部署，建议客户购买我们的 **OPS**，运维团队会在出货前预装系统。远程部署不推荐，因为需要客户本地开启远程访问权限，并且需要协调时差。
+
+
+
+### 3. Touch Panel开机Logo自定义
 
 <img src="./img/image-20241108172003684.png" alt="image-20241108172003684" style="zoom:67%;" /> 
 
