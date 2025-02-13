@@ -173,9 +173,17 @@ media server 和 cloud server 之间的关系是什么?在整个方案中除了�
 
 
 
-
-
 ## 三、设备集控
+
+### NMP-211的CPU，内存是多少
+
+>  Processor ? Memory (RAM), Storage ? Video output connectivity ? Video decoding & security ?
+>
+> (501, 2025-02-13)
+
+- Processor CPU:J1900/RAM 2G, Storage 32G SSD
+- Video Output Connectivity: HDMI Matrix (3 inputs, 3 outputs) for video matrix functionality.
+- Video Decoding & Security: Supports RTMP protocol for decoding, with playback up to 4K resolution. Handles common media formats (MP4, MKV, AVI, etc.). Security is ensured with HTTPS and SSL encryption for secure transmission.
 
 
 
